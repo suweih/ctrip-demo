@@ -1,0 +1,222 @@
+/* body初始化 */
+body {
+  margin: 0 auto;
+  max-width: 540px;
+  min-width: 320px;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -moz-user-select: none;
+  background: #fafafc;
+  font: 400 16px/1.5 PingFangSC-regular, Tahoma, "Lucida Grande", Verdana,
+    "Microsoft Yahei", STXihei, hei;
+}
+/* 固定头部 */
+.search-index {
+  display: flex;
+  /* 固定定位跟父级没有关系,它是以屏幕为准 */
+  position: fixed;
+  top: 0;
+  /* 居中,整体往左50%,再以自身的X轴,往回移动50% */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 44px;
+  /* 固定的盒子应该有宽度 */
+  max-width: 540px;
+  min-width: 320px;
+  background: #f6f6f6;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.search {
+  flex: 1;
+  background-color: white;
+  height: 28px;
+  margin: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.search span {
+  padding-left: 30px;
+  font-size: 12px;
+  line-height: 26px;
+  color: #888;
+}
+.search span::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 100%;
+  background: url(../images/sprite.png) no-repeat 0px 0px;
+  background-size: 20px auto;
+  overflow: hidden;
+  position: absolute;
+  left: 10px;
+  top: 6px;
+}
+.user {
+  width: 44px;
+  height: 44px;
+  font-size: 11px;
+  color: #333;
+  text-align: center;
+  font-weight: normal;
+}
+.user::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../images/sprite.png) no-repeat 1px -74px;
+  background-size: 20px auto;
+  margin: 3px auto 0 auto;
+}
+/* 焦点图 */
+.fours {
+  margin-top: 44px;
+}
+.fours img {
+  width: 100%;
+}
+/* 局部导航栏 */
+.localNav {
+  height: 64px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 5px 5px;
+  border-radius: 4px;
+}
+.localNav ul {
+  display: flex;
+}
+.localNav ul li {
+  flex: 1;
+}
+.localNav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  font-size: 12px;
+}
+.localNav a span.localNavIcon1 {
+  width: 40px;
+  height: 40px;
+  background: url(../images/localNav.png) no-repeat 0px 2px;
+  background-size: 35px auto;
+}
+.localNav a span.localNavIcon2 {
+  width: 40px;
+  height: 40px;
+  background: url(../images/localNav.png) no-repeat 0px -32px;
+  background-size: 35px auto;
+}
+.localNav a span.localNavIcon3 {
+  width: 40px;
+  height: 40px;
+  background: url(../images/localNav.png) no-repeat 3px -68px;
+  background-size: 35px auto;
+}
+.localNav a span.localNavIcon4 {
+  width: 40px;
+  height: 40px;
+  background: url(../images/localNav.png) no-repeat 2px -103px;
+  background-size: 35px auto;
+}
+.localNav a span.localNavIcon5 {
+  width: 40px;
+  height: 40px;
+  background: url(../images/localNav.png) no-repeat 5px -135px;
+  background-size: 35px auto;
+}
+/* 导航栏 */
+nav {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5px 5px;
+}
+nav .nav-common {
+  height: 88px;
+  background: tomato;
+  display: flex;
+}
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+nav .nav-common:nth-child(2) {
+  margin: 3px 0;
+}
+.nav-item:nth-child(-n + 2) {
+  border-right: 1px solid white;
+}
+.nav-item a {
+  height: 44px;
+  line-height: 44px;
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+.nav-item a:nth-child(1) {
+  border-bottom: 1px solid white;
+}
+.nav-item:nth-child(1) a {
+  border: 0;
+  background: url(../images/hotellogo.png) no-repeat bottom center;
+  background-size: 100px;
+}
+.nav-common:nth-child(1) {
+  background: -webkit-linear-gradient(left, #fa5a55, #ffd04d);
+}
+.nav-common:nth-child(2) {
+  background: -webkit-linear-gradient(left, #4b90ed, #4cb9ed);
+}
+.nav-common:nth-child(3) {
+  background: -webkit-linear-gradient(left, #2fc1a7, #67d454);
+}
+/* subnav-entry-icon */
+.subnav-entry {
+  display: flex;
+  border-radius: 5px;
+  margin: 0px 5px;
+  background: white;
+  border: 1px solid #888;
+  flex-wrap: wrap;
+}
+.subnav-entry li {
+  flex: 20%;
+  padding: 5px 0;
+}
+.subnav-entry li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  font-size: 12px;
+}
+.subnav-entry .subnav-entry-icon {
+  width: 28px;
+  height: 28px;
+  background: url(../images/subnav.png) no-repeat 3px 3px;
+  background-size: 23px auto;
+}
+.subnav-entry .subnav-entry-icon2 {
+  width: 28px;
+  height: 28px;
+  background: url(../images/subnav.png) no-repeat 3px -21px;
+  background-size: 23px auto;
+}
+.subnav-entry .subnav-entry-icon3 {
+  width: 28px;
+  height: 28px;
+  background: url(../images/subnav.png) no-repeat 3px -44px;
+  background-size: 23px auto;
+}
